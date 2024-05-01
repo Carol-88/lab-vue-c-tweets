@@ -1,6 +1,6 @@
 <template>
  <section>
-    <img :src="image" alt="profile" />
+    <img :src="image" class="profile" alt="profile" />
  </section>
 </template>
 

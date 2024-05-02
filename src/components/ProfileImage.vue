@@ -8,9 +8,7 @@
 import { defineProps } from 'vue';
 
 const props = defineProps({
- user: {
-    type: Object,
-    required: true
- }
+image: String
 });
+console.log(props.image);
 </script>

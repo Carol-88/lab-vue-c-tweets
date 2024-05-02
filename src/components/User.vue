@@ -1,20 +1,19 @@
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps } from "vue";
 
 const props = defineProps({
-    userData: {
+  userData: {
     type: Object,
-    required: true
-    }
-})
-
+    required: true,
+  },
+});
 </script>
 
 <template>
-     <span class="user">
-          <span class="name">{{userData.name}}</span>
-          <span class="handle">{{userData.handle}}</span>
-        </span>
+  <span class="user">
+    <span class="name">{{ userData.name }}</span>
+    <span class="handle">{{ userData.handle }}</span>
+  </span>
 </template>
 
 <style scoped></style>

@@ -1,3 +1,17 @@
+<script setup>
+import { defineProps } from 'vue';
+import ProfileImage from './ProfileImage.vue'
+import TimeStamp from './TimeStamp.vue'
+
+ const props = defineProps({
+ tweet: {
+    type: Object,
+    required: true
+ }
+});
+
+</script>
+
 <template>
   <div class="tweet">
     <ProfileImage :image="tweet.user.image" />
@@ -10,7 +24,7 @@
           <span class="handle">{{tweet.user.handle}}</span>
         </span>
 
-        <span class="timestamp">{{tweet.timestamp}}</span>
+       <TimeStamp :timestamp="tweet.timestamp" />
       </div>
 
       <p class="message">
@@ -31,19 +45,7 @@
 </template>
 
 
-<script setup>
 
-import { defineProps } from 'vue';
-import ProfileImage from './ProfileImage.vue'
-
- const props = defineProps({
- tweet: {
-    type: Object,
-    required: true
- }
-});
-
-</script>
 
 <style scoped>
 a {

@@ -3,6 +3,7 @@ import { defineProps } from 'vue';
 import ProfileImage from './ProfileImage.vue'
 import TimeStamp from './TimeStamp.vue'
 import Message from './Message.vue'
+import User from './User.vue'
 
  const props = defineProps({
  tweet: {
@@ -20,10 +21,7 @@ import Message from './Message.vue'
 
     <div class="body">
       <div class="top">
-        <span class="user">
-          <span class="name">{{tweet.user.name}}</span>
-          <span class="handle">{{tweet.user.handle}}</span>
-        </span>
+       <User :userData="tweet.user" />
 
        <TimeStamp :timestamp="tweet.timestamp" />
       </div>
